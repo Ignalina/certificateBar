@@ -75,14 +75,15 @@ The options for each keywords is(* denote required values)
 If empty, if CA is true keys to sign certificates and crl lista are added, otherwise client and
 server authentications are added.
 
-| keyword      | description |
-|--------------|-------------|
-| certsign     | allowed to sign certificates|
-| crlsign      | allowed to sign crl|
-| encipherment | allowed to enciphering private or secret keys|
-| clientauth   | allowed to authenticate as client|
-| serverauth   | allowed ot be used for server authenthication|
-| signature    | allowed to perfom digital signature|
+| keyword            | description |
+|--------------------|-------------|
+| certsign           | allowed to sign certificates                               |
+| crlsign            | allowed to sign crl                                        |
+| encipherment       | allowed to enciphering private or secret keys              |
+| clientauth         | allowed to authenticate as client                          |
+| serverauth         | allowed ot be used for server authenthication              |
+| signature          | allowed to perfom digital signature (For auth)             |
+| contentcommitment  | allowed to perfom document signature (prev non repudation) |
 
 
 ## License (MIT)

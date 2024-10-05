@@ -1,7 +1,7 @@
 certificates:
   - certificate: 
-      id: maincaecdsa
-      parent: maincaecdsa
+      id: maincadoc
+      parent: maincadoc
       ca: true
       pkix:
         commonname: www.foo.se
@@ -12,8 +12,8 @@ certificates:
       hashalg: SHA256
       validto: 2034-01-01
   - certificate:
-      id: interca
-      parent: maincaecdsa
+      id: intercadoc
+      parent: maincadoc
       ca: true
       pkix:
         commonname: www.bar.se
@@ -25,7 +25,7 @@ certificates:
       hashalg: SHA256
   - certificate:
       id: client1sign
-      parent: interca
+      parent: intercadoc
       pkix:
         commonname: www.baz.se
         country: SE
@@ -38,7 +38,7 @@ certificates:
         - contentcommitment
   - certificate:
       id: client1encrypt
-      parent: interca
+      parent: intercadoc
       pkix:
         commonname: www.baz.se
         country: SE

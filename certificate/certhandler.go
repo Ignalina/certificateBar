@@ -212,6 +212,8 @@ func getUsage(usage []string, ca bool) (x509.KeyUsage, []x509.ExtKeyUsage) {
 			keyUsage |= x509.KeyUsageKeyEncipherment
 		case "signature":
 			keyUsage |= x509.KeyUsageDigitalSignature
+		case "contentcommitment":
+			keyUsage |= x509.KeyUsageContentCommitment
 		case "clientauth":
 			extKeyUsage = append(extKeyUsage, x509.ExtKeyUsageClientAuth)
 		case "serverauth":

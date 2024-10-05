@@ -1,4 +1,4 @@
-module github.com/ignalina/certificateBar/v2
+module github.com/chrjoh/certificateBar/v2
 
 go 1.23.1
 

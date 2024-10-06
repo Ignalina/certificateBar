@@ -139,7 +139,7 @@ func findSigners(c *Certs) []*Cert {
 func readFile(name string) []byte {
 	data, err := ioutil.ReadFile(name)
 	if err != nil {
-		log.Println("Could not read file: %s\n", name)
+		log.Printf("Could not read file: %s\n", name)
 		os.Exit(1)
 	}
 	return data

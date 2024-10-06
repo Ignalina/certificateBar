@@ -77,7 +77,7 @@ func TestValidSignedCertificateCahin(t *testing.T) {
 	for _, name := range []string{"", "www.baz.se", "www.foo.se", "www.bar.se"} {
 		chainOk := CheckCertificate(name, caBytes, interCaBytes, clientBytes)
 		if !chainOk {
-			t.Fatalf("Failed to verify client for dnsName: ", name)
+			t.Fatalf("Failed to verify client for dnsName: %s", name)
 		}
 	}
 }

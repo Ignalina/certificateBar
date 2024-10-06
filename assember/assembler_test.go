@@ -15,16 +15,16 @@ func TestReadConfigFile(t *testing.T) {
 	test := marshalCertData("_fixtures/one_cert.yaml", t)
 	c := test.Certificates[0].CertConfig
 	if !c.CA {
-		t.Fatalf("wanted: true, got:", c.CA)
+		t.Fatalf("wanted: true, got: %t", c.CA)
 	}
 	if c.KeyType != "P224" {
-		t.Fatalf("wanted: P224, got:", c.KeyType)
+		t.Fatalf("wanted: P224, got: %s", c.KeyType)
 	}
 	if c.Pkix.CommonName != "www.foo.se" {
-		t.Fatalf("wanted: www.foo.se, got:", c.Pkix.CommonName)
+		t.Fatalf("wanted: www.foo.se, got: %s", c.Pkix.CommonName)
 	}
 	if c.ValidFrom().String() != "2015-11-01 00:00:00 +0000 UTC" {
-		t.Fatalf("wanted: 2015-11-01 00:00:00 +0000 UTC, got:", c.ValidFrom())
+		t.Fatalf("wanted: 2015-11-01 00:00:00 +0000 UTC, got: %v", c.ValidFrom())
 	}
 }
 
